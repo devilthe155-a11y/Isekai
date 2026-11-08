@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Arcadia Link</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700;800&family=Rajdhani:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+<canvas id="c"></canvas>
+<div id="vig"></div>
+<div id="hud" hidden>
+  <div id="plate" class="panel"><div class="nm"><span id="pName">Player</span><span id="pLv">Lv 1</span></div><div class="bar"><i id="hpFill"></i><b id="hpTxt"></b></div><div class="bar xp"><i id="xpFill"></i></div></div>
+  <div id="track"></div>
+  <div id="chat"><div id="chatLog"></div><input id="chatIn" maxlength="70" placeholder="Say something, Enter to send" hidden autocomplete="off"></div>
+  <div id="tr"><canvas id="mini" width="104" height="104"></canvas><div id="loc"></div><div class="row"><button class="tbtn" id="bChat">CHAT</button><button class="tbtn" id="bMenu">MENU</button></div></div>
+  <div id="boss" hidden><div class="bn" id="bossName"></div><div class="bar"><i id="bossFill"></i></div></div>
+  <div id="toasts"></div>
+  <button id="prompt" hidden></button>
+  <div id="hotbar">
+    <button class="hb" id="b_dodge"><i class="cd"></i><kbd>K</kbd></button>
+    <button class="hb big" id="b_atk"><i class="cd"></i><kbd>J</kbd></button>
+    <button class="hb" id="b_s1"><i class="cd"></i><kbd>1</kbd></button>
+    <button class="hb" id="b_s2"><i class="cd"></i><kbd>2</kbd></button>
+    <button class="hb" id="b_s3"><i class="cd"></i><kbd>3</kbd></button>
+    <button class="hb" id="b_s4"><i class="cd"></i><kbd>4</kbd></button>
+    <button class="hb" id="b_pot"><i class="cd"></i><kbd>R</kbd><em id="potN"></em></button>
+  </div>
+  <div id="joy" hidden><i></i></div>
+</div>
+<div id="banner"></div>
+<div class="win panel scan" id="win" hidden><div class="tabs" id="wtabs"></div><div id="wbody"></div></div>
+<div class="panel scan" id="dlg" hidden></div>
+<div id="death" hidden><h2>YOU DIED</h2><p class="mut">Your HP reached zero. In this world, there is a way back.</p><div><button class="btn" id="respawn">RETURN TO THE CITY</button></div></div>
+<div id="title"><div class="box">
+  <h1><span>FULL-DIVE VRMMORPG</span>ARCADIA LINK</h1>
+  <p>Floor 1 &middot; The Floating Castle</p>
+  <input id="nameIn" maxlength="14" value="Wanderer" autocomplete="off" aria-label="Character name">
+  <button id="go">LINK START</button>
+  <small id="tsub">Move: WASD / arrows &middot; Attack: J or click &middot; Skills: 1-4 &middot; Dodge: K &middot; Potion: R &middot; Interact: E &middot; Menu: M<br>On a phone: drag the left half to move, use the buttons on the right.</small>
+</div></div>
+<div class="fade" id="fade"></div><div id="flash"></div>
+</div>
+<script src="src/core.js"></script>
+<script src="src/world.js"></script>
+<script src="src/data.js"></script>
+<script src="src/combat.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
